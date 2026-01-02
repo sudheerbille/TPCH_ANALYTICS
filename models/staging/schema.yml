@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_country
+    columns:
+      - name: country_code
+        tests:
+          - unique
+          - not_null
+  - name: stg_region
+    columns:
+      - name: region_code
+        tests:
+          - unique
+          - not_null
+  - name: stg_customer
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: country_code
+        tests:
+          - not_null
+       

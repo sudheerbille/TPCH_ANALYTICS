@@ -1,4 +1,4 @@
-select c.country_code, c.country_name, r.region_name
+select c.country_code, c.country_name, r.region_name, CURRENT_TIMESTAMP() AS LOAD_TS
 
 from {{ ref("stg_country") }} as c
 

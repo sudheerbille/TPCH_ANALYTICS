@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_country
+    columns:
+      - name: country_code
+        tests:
+          - unique
+          - not_null
+          
+       

@@ -10,6 +10,7 @@ models:
       - name: region_code
         tests:
           - relationships:
+             arguments:
               to: ref('stg_region')
               field: region_code
   - name: stg_region
@@ -27,4 +28,5 @@ models:
       - name: country_code
         tests:
           - not_null
+
        

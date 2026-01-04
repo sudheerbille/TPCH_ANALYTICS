@@ -7,6 +7,11 @@ models:
         tests:
           - unique
           - not_null
+      - name: region_code
+        tests:
+          - relationships:
+              to: ref('stg_region')
+              field: region_code
   - name: stg_region
     columns:
       - name: region_code

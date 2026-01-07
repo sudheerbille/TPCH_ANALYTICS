@@ -2,7 +2,8 @@ select customer.customer_id,
        customer.customer_name,
        customer.account_balance,
        country.country_name,
-       country.region_name
+       country.region_name,
+       CURRENT_TIMESTAMP AS LOAD_TS
 
 from {{ ref('stg_customer') }} as customer
 

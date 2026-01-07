@@ -3,7 +3,8 @@ select s.supplier_id,
        s.phone,
        s.account_balance,
        c.country_name,
-       c.region_name
+       c.region_name,
+       CURRENT_TIMESTAMP as LOAD_TS
 from {{ ref('stg_supplier') }} as s
 
 left join {{ ref('dim_country') }} as c
